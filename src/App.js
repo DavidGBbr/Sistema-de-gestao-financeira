@@ -1,5 +1,6 @@
 import React from "react";
 import { CardItems } from "./components/CardItems";
+import { Form } from "./components/Form";
 import { Header } from "./components/Header";
 
 const App = () => {
@@ -7,6 +8,7 @@ const App = () => {
     <>
       <Header />
       <CardItems />
+      <Form/>
     </>
   );
 };

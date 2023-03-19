@@ -8,7 +8,7 @@ const App = () => {
     <>
       <Header />
       <CardItems />
-      <Form/>
+      <Form />
     </>
   );
 };

@@ -20,7 +20,7 @@ export const LabelInput = styled.label`
 `;
 
 export const Input = styled.input`
-  padding: 10px;
+  padding: 5px;
   border-radius: 15px;
   border: none;
   font-family: monospace;

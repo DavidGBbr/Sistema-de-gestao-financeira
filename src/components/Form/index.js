@@ -1,11 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { TransactionsContext } from "../../context/TransactionsContext";
 import * as C from "./styles";
 
 export const Form = () => {
+  const { transactionsList, setTransitionsList } =
+    useContext(TransactionsContext);
+
   const [desc, setDesc] = useState(""); //Descrição
   const [amount, setAmount] = useState(""); //Quantia
   const [isExpense, setExpense] = useState(""); //tipo de transação
-  const [transactionsList, setTransitionsList] = useState([]); //Lista com as transações
 
   const handleAddTransition = () => {
     if (!desc || !amount) {
@@ -23,6 +26,7 @@ export const Form = () => {
     setTransitionsList(newTransactionList);
     setDesc("");
     setAmount("");
+    console.log(transactionsList);
   };
   return (
     <C.Container>

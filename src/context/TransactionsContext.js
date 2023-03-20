@@ -3,7 +3,10 @@ import { createContext, useState } from "react";
 export const TransactionsContext = createContext();
 
 export const TransactionsProvider = ({ children }) => {
-  const [transactionsList, setTransitionsList] = useState([]); //Lista com as transações
+  const data = localStorage.getItem("transactions");
+  const [transactionsList, setTransitionsList] = useState(
+    data ? JSON.parse(data) : []
+  ); //Lista com as transações
 
   return (
     <TransactionsContext.Provider

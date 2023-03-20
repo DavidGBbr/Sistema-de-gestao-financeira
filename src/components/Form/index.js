@@ -26,7 +26,7 @@ export const Form = () => {
     setTransitionsList(newTransactionList);
     setDesc("");
     setAmount("");
-    console.log(transactionsList);
+    localStorage.setItem("transactions", JSON.stringify(newTransactionList));
   };
   return (
     <C.Container>

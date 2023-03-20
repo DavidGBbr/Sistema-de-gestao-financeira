@@ -5,6 +5,7 @@ import { TableItem } from "../TableItem";
 
 export const TableTransactions = () => {
   const { transactionsList } = useContext(TransactionsContext);
+  console.log(transactionsList);
   return (
     <C.Container>
       <C.Table>

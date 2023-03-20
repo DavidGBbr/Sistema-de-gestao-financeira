@@ -11,6 +11,18 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
+
+  @media (max-width: 1000px) {
+    gap: 10px;
+  }
+
+  @media (max-width: 850px) {
+    flex-direction: column;
+    max-width: 500px;
+    padding: 30px;
+    gap: 20px;
+  }
 `;
 
 export const LabelInput = styled.label`
@@ -61,9 +73,21 @@ export const Button = styled.button`
   :hover {
     background-color: rgba(255, 255, 255, 0.7);
   }
+
+  @media (max-width: 850px) {
+    width: 50%;
+  }
 `;
 export const InputContent = styled.div`
   display: flex;
   flex-direction: column;
   gap: 5px;
+
+  @media (max-width: 1000px) {
+    width: 200px;
+  }
+
+  @media (max-width: 850px) {
+    width: 100%;
+  }
 `;

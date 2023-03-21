@@ -6,9 +6,9 @@ export const Form = () => {
   const { transactionsList, setTransitionsList } =
     useContext(TransactionsContext);
 
-  const [desc, setDesc] = useState(""); //Descrição
-  const [amount, setAmount] = useState(""); //Quantia
-  const [isExpense, setExpense] = useState(""); //tipo de transação
+  const [desc, setDesc] = useState("");
+  const [amount, setAmount] = useState("");
+  const [isExpense, setExpense] = useState("");
 
   const handleAddTransition = () => {
     if (!desc || !amount) {

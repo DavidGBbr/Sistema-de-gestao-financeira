@@ -7,10 +7,16 @@ export const TransactionsProvider = ({ children }) => {
   const [transactionsList, setTransitionsList] = useState(
     data ? JSON.parse(data) : []
   );
-
+  const onDelete = (id) => {
+    const newArray = transactionsList.filter(
+      (transaction) => transaction.id !== id
+    );
+    setTransitionsList(newArray);
+    localStorage.setItem("transactions", JSON.stringify(newArray));
+  };
   return (
     <TransactionsContext.Provider
-      value={{ transactionsList, setTransitionsList }}
+      value={{ transactionsList, setTransitionsList, onDelete }}
     >
       {children}
     </TransactionsContext.Provider>

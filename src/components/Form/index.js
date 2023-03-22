@@ -11,12 +11,20 @@ export const Form = () => {
   const [isExpense, setExpense] = useState("");
 
   const handleAddTransition = () => {
-    if (!desc || !amount) {
-      alert("Preencha todos os campos");
+    if (!desc || !amount || !isExpense.length) {
+      alert("Por favor, preencha todos os campos!");
       return;
     }
 
+    function generateID() {
+      const randomPart = Math.random().toString(36).substr(2, 5);
+      const timestamp = new Date().getTime();
+      const id = `${randomPart}${timestamp}`;
+      return id;
+    }
+
     const transactionItem = {
+      id: generateID(),
       desc: desc,
       amount: amount,
       isExpense: isExpense,

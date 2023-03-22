@@ -4,7 +4,7 @@ import { TransactionsContext } from "../../context/TransactionsContext";
 import { TableItem } from "../TableItem";
 
 export const TableTransactions = () => {
-  const { transactionsList } = useContext(TransactionsContext);
+  const { transactionsList, onDelete } = useContext(TransactionsContext);
   return (
     <C.Container>
       <C.Table>
@@ -19,10 +19,9 @@ export const TableTransactions = () => {
           {transactionsList.length === 0 && (
             <C.NoData>Sem transações...</C.NoData>
           )}
-          {transactionsList.length > 0 &&
-            transactionsList.map((transaction, index) => (
-              <TableItem key={index} data={transaction} />
-            ))}
+          {transactionsList?.map((transaction, index) => (
+            <TableItem key={index} data={transaction} onDelete={onDelete} />
+          ))}
         </C.Tbody>
       </C.Table>
     </C.Container>

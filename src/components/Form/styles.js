@@ -88,6 +88,6 @@ export const InputContent = styled.div`
   }
 
   @media (max-width: 850px) {
-    width: 100%;
+    width: calc(100% - 40px);
   }
 `;

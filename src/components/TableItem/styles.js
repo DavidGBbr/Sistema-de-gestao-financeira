@@ -9,4 +9,11 @@ export const Td = styled.td`
   color: rgba(255, 255, 255, 0.7);
   color: ${(props) => props.color};
   font-size: 18px;
+  
+  @media screen and (max-width: 768px) {
+    
+    font-size:14px;
+    padding: 12px;
+ 
+   }
 `;

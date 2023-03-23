@@ -32,7 +32,7 @@ export const Th = styled.th`
   font-size: 18px;
 
   @media (max-width: 400px) {
-    padding: 8px;
+    padding: 8px 3px;
   }
 `;
 

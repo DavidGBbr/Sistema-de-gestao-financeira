@@ -6,8 +6,13 @@ export const Container = styled.div`
   margin: 40px auto;
   border-radius: 15px;
   background-color: #111;
-  padding: 30px 30px;
+  padding: 30px;
   box-sizing: border-box;
+
+  @media (max-width: 400px) {
+    padding: 20px 10px;
+    width: calc(100% - 20px);
+  }
 `;
 
 export const Table = styled.table`
@@ -25,6 +30,10 @@ export const Th = styled.th`
   padding: 16px;
   text-align: left;
   font-size: 18px;
+
+  @media (max-width: 400px) {
+    padding: 8px;
+  }
 `;
 
 export const Tr = styled.tr`

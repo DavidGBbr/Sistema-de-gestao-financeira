@@ -13,6 +13,10 @@ export const Container = styled.div`
   @media (max-width: 500px) {
     width: calc(100% - 40px);
   }
+
+  @media (max-width: 400px) {
+    width: calc(100% - 20px);
+  }
 `;
 
 export const DescriptionContent = styled.div`

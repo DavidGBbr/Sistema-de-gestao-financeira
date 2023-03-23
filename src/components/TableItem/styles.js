@@ -14,4 +14,8 @@ export const Td = styled.td`
     font-size: 14px;
     padding: 12px;
   }
+
+  @media screen and (max-width: 450px) {
+    padding: 12px 3px;
+  }
 `;
